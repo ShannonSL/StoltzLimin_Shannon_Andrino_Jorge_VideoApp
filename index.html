@@ -1,5 +1,6 @@
 <!DOCTYPE <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,16 +8,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.2/vue-router.min.js"></script>
+
 </head>
 <body>
-<h3>Roku Flashback</h3>    
+    <header>
+        <img src="images/roku_logo.png" width="50px" height="50px">
+        <img src="images/FlashBack_Logo.png" width="50px" height="50px">
+        <nav>
+            <ul>
+                <li>Parents</li>
+                <li>Kids</li>
+                <li><img src="images/user_icon.svg" width="50px" height="50px"> Log In </li>
+                <li><img src="images/user_icon.svg" width="50px" height="50px"> Sign Up </li>
+            </ul>
+        </nav>
+    </header>
+    <container id="categories">
+        <div id="movies">
 
+            <img src="images/movie_icon.svg">
+            <p>Go back to the Past with our Movie selections from the 50s to the 90s.</p>
 
+        </div>
+        <div id="music">
 
+            <img src="images/Music_Icon.png">
+            <p>Resume the old days with your 50s to 90s TV shows.</p>
 
+        </div>
+        <div id="TVshows">
 
+            <img src="images/TV_Icon.png">
+            <p>Listen to the greatest hit songs from the 50s and the 90s.</p>
+
+        </div>
+    </container>
+    <hr>
+    <container id="users">
+        <div id="parents">
+            <img src="images/parents_icon.svg">
+            <h1>PARENTS</h1>
+        </div>
+        <div id="kids">
+            <img src="images/kids_icon.svg">
+            <h1>KIDS</h1>
+        </div>
+        <div id="usersInfo">
+            <p>Roku´s FlashBack streaming site allows you to go back in time to remember and enjoy Movies, TV Shows and
+                Music, from the 50s all the ways to the 90s. Enjoy the content specially selected from your own
+                preference in all the content we have for you.</p>
+        </div>
+    </container>
+    <hr>
+    <container id="features1">
+        <div id="quotes">
+            <img src="images/quotes_icon.svg">
+            <div>
+                <p>Quotes</p>
+            </div>
+        </div>
+        <div id="trivia">
+            <img src="images/trivia_icon.svg">
+            <div>
+                <p>Trivia</p>
+            </div>
+        </div>
+    </container>
+    <hr>
+    <container id="features2">
+        <div id="clips">
+            <img src="images/clips_icon.svg">
+            <div>
+                <p>Clips</p>
+            </div>
+        </div>
+        <div id="interview">
+            <img src="images/interviews_icon.png">
+            <div>
+                <p>Interview</p>
+            </div>
+        </div>
+    </container>
+    <footer>
+        <div>
+            <button><h2>Back To Top</h2></button>
+        </div>
+        <div>
+            <img src="images/Facebook_icon.png">
+            <img src="images/Twitter_icon.png">
+            <img src="images/Instagram_icon.png">
+            <img src="images/Youtube_icon.png">
+        </div>
+        <div>
+            <p>&copy;Roku, Inc.  All Rights Reserved</p>
+        </div>
+    </footer>
 
     <script src="js/main.js"></script>
 </body>
+
 </html>
