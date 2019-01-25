@@ -6,105 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Roku Flashback</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/foundation.css">
     <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.2/vue-router.min.js"></script>
 
 </head>
 <body>
-    <header>
-        <img src="images/roku_logo.png" width="50px" height="50px">
-        <img src="images/FlashBack_Logo.png" width="50px" height="50px">
+    <header class="row">
+        <div class="row">
+            <img src="images/roku_logo.png" class="columns small-offset-2 small-2 large-4">
+        </div>
+        <div class="row">
+
+            <img src="images/FlashBack_Logo.png" class="columns small-6 large-4">
+            
+        </div>
+
+
+        <!-- Desktop Nav -->
         <nav>
             <ul>
-                <li>Parents</li>
-                <li>Kids</li>
-                <li><img src="images/user_icon.svg" width="50px" height="50px"> Log In </li>
-                <li><img src="images/user_icon.svg" width="50px" height="50px"> Sign Up </li>
+                <li><a>Parents</a></li>
+                <li><a>Kids</a></li>
+                <li><img src="images/user_icon.svg" class="columns small-4 large-4"><a> Log In </a></li>
+                <li><img src="images/user_icon.svg" class="columns small-4 large-4"><a> Sign Up </a></li>
             </ul>
         </nav>
     </header>
-    <container id="categories">
+    <container>
+        <!-- Mobile Nav -->
+
+        <div class="dropdownNav">
+            <button class="dropButton">
+                <div id="listNav" class="content">
+                    <a href="parentpage.html">Parents</a>
+                    <a href="kidspage.html">Kids</a>
+                    <a href="#">Log In</a>
+                    <a href="#">Sign Up</a>
+                </div>
+            </button>
+        </div>
+
+    </container>
+
+
+        
+    <container id="categories" class="row">
         <div id="movies">
 
-            <img src="images/movie_icon.svg">
+            <img src="images/movie_icon.svg" class="columns small-4 large-4">
             <p>Go back to the Past with our Movie selections from the 50s to the 90s.</p>
 
         </div>
         <div id="music">
 
-            <img src="images/Music_Icon.png">
+            <img src="images/Music_Icon.png" class="columns small-4 large-4">
             <p>Resume the old days with your 50s to 90s TV shows.</p>
 
         </div>
         <div id="TVshows">
 
-            <img src="images/TV_Icon.png">
+            <img src="images/TV_Icon.png" class="columns small-4 large-4">
             <p>Listen to the greatest hit songs from the 50s and the 90s.</p>
 
         </div>
     </container>
     <hr>
-    <container id="users">
-        <div id="parents">
+    <container id="users" class="row">
+        <div id="parents" class="columns small-4 large-4">
             <img src="images/parents_icon.svg">
             <h1>PARENTS</h1>
         </div>
-        <div id="kids">
+        <div id="kids" class="columns small-4 large-4">
             <img src="images/kids_icon.svg">
             <h1>KIDS</h1>
         </div>
-        <div id="usersInfo">
+        <div id="usersInfo" class="columns small-4 large-4">
             <p>Roku´s FlashBack streaming site allows you to go back in time to remember and enjoy Movies, TV Shows and
                 Music, from the 50s all the ways to the 90s. Enjoy the content specially selected from your own
                 preference in all the content we have for you.</p>
         </div>
     </container>
     <hr>
-    <container id="features1">
-        <div id="quotes">
+    <container id="features1" class="row">
+        <div class="columns small-4 large-4">
             <img src="images/quotes_icon.svg">
-            <div>
+            <div id="quotes">
                 <p>Quotes</p>
             </div>
         </div>
-        <div id="trivia">
+        <div class="columns small-4 large-4">
             <img src="images/trivia_icon.svg">
-            <div>
+            <div id="trivia">
                 <p>Trivia</p>
             </div>
         </div>
     </container>
     <hr>
-    <container id="features2">
-        <div id="clips">
+    <container id="features2" class="row">
+        <div class="columns small-4 large-4">
             <img src="images/clips_icon.svg">
-            <div>
+            <div id="clips">
                 <p>Clips</p>
             </div>
         </div>
-        <div id="interview">
+        <div class="columns small-4 large-4">
             <img src="images/interviews_icon.png">
-            <div>
+            <div id="interview">
                 <p>Interview</p>
             </div>
         </div>
     </container>
-    <footer>
-        <div>
+    <footer class="row">
+        <div class="columns small-4 large-4">
             <button><h2>Back To Top</h2></button>
         </div>
-        <div>
+        <div class="columns small-4 large-4">
             <img src="images/Facebook_icon.png">
             <img src="images/Twitter_icon.png">
             <img src="images/Instagram_icon.png">
             <img src="images/Youtube_icon.png">
         </div>
-        <div>
+        <div class="columns small-4 large-4">
             <p>&copy;Roku, Inc.  All Rights Reserved</p>
         </div>
     </footer>
-
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
     <script src="js/main.js"></script>
 </body>
 
