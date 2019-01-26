@@ -15,41 +15,43 @@
 <body>
     <header class="row">
         <div class="row">
-            <img src="images/roku_logo.png" class="columns small-offset-2 small-2 large-4">
+            <a href="index.html"><img src="images/roku_logo.png" class="columns small-offset-2 small-2 large-4"></a>
         </div>
         <div class="row">
 
-            <img src="images/FlashBack_Logo.png" class="columns small-6 large-4">
+            <a href="index.html"><img src="images/FlashBack_Logo.png" class="columns small-6 large-4"></a>
             
-        </div>
+            <container class="columns small-5" class="mobileNav">
+                <!-- Mobile Nav -->
 
+                <div class="dropdownNav">
+                    <button onclick="myFunction()" class="dropButton">Menu</button>
+                        <div id="listNav" class="content">
+                            <a href="parentpage.html">Parents</a>
+                            <a href="kidspage.html">Kids</a>
+                            <a href="#">Log In</a>
+                            <a href="#">Sign Up</a>
+                        </div>
+                </div>
+        
+            </container>
 
-        <!-- Desktop Nav -->
-        <nav>
-            <ul>
-                <li><a>Parents</a></li>
-                <li><a>Kids</a></li>
-                <li><img src="images/user_icon.svg" class="columns small-4 large-4"><a> Log In </a></li>
-                <li><img src="images/user_icon.svg" class="columns small-4 large-4"><a> Sign Up </a></li>
-            </ul>
-        </nav>
-    </header>
-    <container>
-        <!-- Mobile Nav -->
+        </div>    
 
-        <div class="dropdownNav">
-            <button class="dropButton">
-                <div id="listNav" class="content">
+        <container class="desktopNav">
+            <!-- Desktop Nav -->
+            <nav>
+                <ul>
                     <a href="parentpage.html">Parents</a>
                     <a href="kidspage.html">Kids</a>
-                    <a href="#">Log In</a>
-                    <a href="#">Sign Up</a>
-                </div>
-            </button>
-        </div>
-
-    </container>
-
+                    <a href="#"><img src="images/user_icon.svg" class="columns small-4 large-4"> Log In </a>
+                    <a href="#"><img src="images/user_icon.svg" class="columns small-4 large-4"> Sign Up </a>
+                </ul>
+                </nav>
+        </container>
+        
+    </header>
+    
 
         
     <container id="categories" class="row">
