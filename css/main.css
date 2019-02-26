@@ -15,6 +15,19 @@ p {
 }
 */
 
+/* Main Content */
+
+body
+{
+    background-color: #49005F;
+}
+
+p
+{
+    font-size: 18px;
+    color: white;
+}
+
 /* DropDown Menu */
 
 .dropButton
@@ -70,9 +83,39 @@ header
 
 @media only screen and (min-width: 481px)
 {
+    p
+    {
+        font-size: 30px;
+    }
+
+    #categories
+    {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    #kids
+    {
+        margin-left: 30%;
+        margin-bottom: 10%;
+    }
+
+
+
     .dropdownNav
     {
         visibility: hidden;
+    }
+    a
+    {
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    }
+
+    .backtoTop
+    {
+        margin-left: 38%;
     }
 }
 @media only screen and (max-width: 480px)
@@ -82,5 +125,76 @@ header
         visibility: hidden;
         display: none;
     }
+
+    .backtoTop
+    {
+        margin-left: 20%;
+    }
+
+}
+/* Desktop Menu */
+
+.Dlinks
+{
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
+/* Home Page */
+
+
+#movies, #TVshows, #music
+{
+    background-color: #7BBBEA;
+    border-radius: 4%;
+    margin-bottom: 10px;
+}
+
+#usersInfo
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1
+{
+    color: white;
+}
+
+#quotes, #trivia, #clips, #interview
+{
+    margin-left: 40%;
+}
+
+
+/* footer */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .social
+  {
+      width: 50%;
+      margin-left: 20%;
+      margin-bottom: 30%;
+  }
+
+.backtoTop
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
