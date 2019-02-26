@@ -83,9 +83,23 @@ header
 
 @media only screen and (min-width: 481px)
 {
+
+    h1
+    {
+        font-size: 100px;
+    }
+
+    #music, #TVshows, #movies, #parents, #kids, hr
+    {
+        margin-bottom: 60px;
+        margin-top: 60px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
     p
     {
-        font-size: 30px;
+        font-size: 70px;
     }
 
     #categories
