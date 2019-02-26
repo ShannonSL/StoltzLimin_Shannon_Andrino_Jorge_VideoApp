@@ -13,15 +13,26 @@
 
 </head>
 <body>
-    <header class="row">
-        <div class="row">
-            <a href="index.html"><img src="images/roku_logo.png" class="columns small-offset-2 small-2 large-4"></a>
+    <header class="grid-x">
+        <div class="grid-x">
+            <a href="index.html"><img src="images/roku_logo.png" class="cell small-offset-2 small-2 large-1 large-pull-1"></a>
         </div>
-        <div class="row">
+        <div class="grid-x">
 
-            <a href="index.html"><img src="images/FlashBack_Logo.png" class="columns small-6 large-4"></a>
+            <a href="index.html"><img src="images/FlashBack_Logo.png" class="cell small-6 large-4"></a>
+
+            <div class="desktopNav">
+                <!-- Desktop Nav -->
+                
+                <nav class="cell small-0 large-offset-6 large-9">
+                    <a class="Dlinks" href="parentpage.html">Parents</a>
+                    <a class="Dlinks" href="kidspage.html">Kids</a>
+                    <a class="Dlinks" href="#"><img src="images/user_icon.svg" width="5%" height="5%"> Log In </a>
+                    <a class="Dlinks" href="#"><img src="images/user_icon.svg" width="5%" height="5%"> Sign Up </a>
+                </nav>
+            </div>
             
-            <container class="columns small-5" class="mobileNav">
+            <container class="cell small-5 large-0" class="mobileNav">
                 <!-- Mobile Nav -->
 
                 <div class="dropdownNav">
@@ -37,68 +48,57 @@
             </container>
 
         </div>    
-
-        <container class="desktopNav">
-            <!-- Desktop Nav -->
-            <nav>
-                <ul>
-                    <a href="parentpage.html">Parents</a>
-                    <a href="kidspage.html">Kids</a>
-                    <a href="#"><img src="images/user_icon.svg" class="columns small-4 large-4"> Log In </a>
-                    <a href="#"><img src="images/user_icon.svg" class="columns small-4 large-4"> Sign Up </a>
-                </ul>
-                </nav>
-        </container>
         
     </header>
     
 
         
-    <container id="categories" class="row">
+    <div id="categories" class="grid-x">
         <div id="movies">
 
-            <img src="images/movie_icon.svg" class="columns small-4 large-4">
-            <p>Go back to the Past with our Movie selections from the 50s to the 90s.</p>
+            <img src="images/movie_icon.svg" class="cell small-6 large-4">
+            <p class="columns small-6 large-2">Go back to the Past with our Movie selections from the 50s to the 90s.</p>
 
         </div>
         <div id="music">
 
-            <img src="images/Music_Icon.png" class="columns small-4 large-4">
-            <p>Resume the old days with your 50s to 90s TV shows.</p>
+            <img src="images/Music_Icon.png" class="cell small-6 large-4">
+            <p class="columns small-6 large-2">Resume the old days with your 50s to 90s TV shows.</p>
 
         </div>
         <div id="TVshows">
 
-            <img src="images/TV_Icon.png" class="columns small-4 large-4">
-            <p>Listen to the greatest hit songs from the 50s and the 90s.</p>
+            <img src="images/TV_Icon.png" class="cell small-6 large-4">
+            <p class="columns small-6 large-2">Listen to the greatest hit songs from the 50s and the 90s.</p>
 
         </div>
-    </container>
+    </div>
     <hr>
-    <container id="users" class="row">
-        <div id="parents" class="columns small-4 large-4">
-            <img src="images/parents_icon.svg">
-            <h1>PARENTS</h1>
+    <container id="users" class="grid-x">
+        <div id="parents" class="cell small-8 large-6">
+            <a href="parentpage.html"><img src="images/parents_icon.svg"></a>
+            <h1 class="cell small-offset-2 small-8">PARENTS</h1>
         </div>
-        <div id="kids" class="columns small-4 large-4">
-            <img src="images/kids_icon.svg">
-            <h1>KIDS</h1>
+        <div id="kids" class="cell small-12 large-8">
+            <a href="kidspage.html"><img src="images/kids_icon.svg"></a>
+            <h1 class="cell small-offset-6 small-8">KIDS</h1>
         </div>
-        <div id="usersInfo" class="columns small-4 large-4">
+        <div id="usersInfo" class="cell small-offset-2 small-8 large-8">
             <p>Roku´s FlashBack streaming site allows you to go back in time to remember and enjoy Movies, TV Shows and
                 Music, from the 50s all the ways to the 90s. Enjoy the content specially selected from your own
                 preference in all the content we have for you.</p>
         </div>
     </container>
     <hr>
-    <container id="features1" class="row">
-        <div class="columns small-4 large-4">
+    <container id="features1" class="grid-x">
+        <div class="cell small-offset-1 small-10 large-offset-4 large-4">
             <img src="images/quotes_icon.svg">
             <div id="quotes">
                 <p>Quotes</p>
             </div>
         </div>
-        <div class="columns small-4 large-4">
+        <hr>
+        <div class="cell small-offset-1 small-10 large-offset-4 large-4">
             <img src="images/trivia_icon.svg">
             <div id="trivia">
                 <p>Trivia</p>
@@ -106,31 +106,38 @@
         </div>
     </container>
     <hr>
-    <container id="features2" class="row">
-        <div class="columns small-4 large-4">
+    <container id="features2" class="grid-x">
+        <div class="cell small-offset-1 small-10 large-offset-4 large-4">
             <img src="images/clips_icon.svg">
             <div id="clips">
                 <p>Clips</p>
             </div>
         </div>
-        <div class="columns small-4 large-4">
+        <hr>
+        <div class="cell small-offset-1 small-10 large-offset-4 large-4">
             <img src="images/interviews_icon.png">
             <div id="interview">
                 <p>Interview</p>
             </div>
         </div>
+        <hr>
     </container>
-    <footer class="row">
-        <div class="columns small-4 large-4">
-            <button><h2>Back To Top</h2></button>
+    <footer class="grid-x">
+        <div class="backtoTop" class="cell small-offset-3 small-10 large-offset-4 large-4">
+            <a href="#categories"><button><h2>Back To Top</h2></button></a>
         </div>
-        <div class="columns small-4 large-4">
-            <img src="images/Facebook_icon.png">
-            <img src="images/Twitter_icon.png">
-            <img src="images/Instagram_icon.png">
-            <img src="images/Youtube_icon.png">
+        <div class="grid-x">
+            <!--<div class="cell small-offset-1 small-10 large-4" id="socialMedia">-->
+                <ul>
+                    <li class="cell small-3 large-3"><img class="social" src="images/Facebook_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Twitter_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Instagram_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Youtube_icon.png"></li>    
+                </ul>
+                
+            <!--</div>-->
         </div>
-        <div class="columns small-4 large-4">
+        <div class="cell small-offset-2 small-10 large-offset-4 large-12">
             <p>&copy;Roku, Inc.  All Rights Reserved</p>
         </div>
     </footer>
