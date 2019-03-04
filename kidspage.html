@@ -1,17 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kid's Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Roku Flashback</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/foundation.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.2/vue-router.min.js"></script>
     
 </head>
 <body>
+    <header class="grid-x">
+        <div class="grid-x">
+            <a href="index.html"><img src="images/roku_logo.png" class="cell small-offset-2 small-2 large-1 large-pull-1"></a>
+        </div>
+        <div class="grid-x">
+
+            <a href="index.html"><img src="images/FlashBack_Logo.png" class="cell small-6 large-4"></a>
+
+            <div class="desktopNav">
+                <!-- Desktop Nav -->
+                
+                <nav class="cell small-0 large-offset-6 large-9">
+                    <a class="Dlinks" href="parentpage.html">Parents</a>
+                    <a class="Dlinks" href="kidspage.html">Kids</a>
+                    <a class="Dlinks" href="#"><img src="images/user_icon.svg" width="5%" height="5%"> Sign Out </a>
+                </nav>
+            </div>
+            
+            <container class="cell small-5 large-0" class="mobileNav">
+                <!-- Mobile Nav -->
+
+                <div class="dropdownNav">
+                    <button onclick="myFunction()" class="dropButton">Menu</button>
+                        <div id="listNav" class="content">
+                            <a href="parentpage.html">Parents</a>
+                            <a href="kidspage.html">Kids</a>
+                            <a href="#">Sign Out</a>
+                        </div>
+                </div>
+        
+            </container>
+
+        </div>    
+        
+    </header>
+
+    <div class="grid-x">
+        <img class="cell small-offset-1 small-10 large-offset-3 large-5" src="images/kids_icon.svg">
+    </div>
+    <div class="grid-x">
+        <h1 class="cell small-offset-1 small-10 large-offset-1 large-10">Kids</h1>
+    </div>
     
 
-    <script src="js/main.js"></script>
+
+    <footer class="grid-x">
+        <div class="backtoTop" class="cell small-offset-3 small-10 large-offset-4 large-4">
+            <a href="#categories"><button><h2>Back To Top</h2></button></a>
+        </div>
+        <div class="grid-x">
+            <!--<div class="cell small-offset-1 small-10 large-4" id="socialMedia">-->
+                <ul>
+                    <li class="cell small-3 large-3"><img class="social" src="images/Facebook_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Twitter_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Instagram_icon.png"></li>    
+                    <li class="cell small-3 large-3"><img class="social" src="images/Youtube_icon.png"></li>    
+                </ul>
+                
+            <!--</div>-->
+        </div>
+        <div class="cell small-offset-2 small-10 large-offset-3 large-12">
+            <p>&copy;Roku, Inc.  All Rights Reserved</p>
+        </div>
+    </footer>
+  
+    
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.js"></script>
+        <script src="js/main.js"></script>
 </body>
 </html>

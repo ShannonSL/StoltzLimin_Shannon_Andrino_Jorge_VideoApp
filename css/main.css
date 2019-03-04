@@ -1,3 +1,5 @@
+/*
+
 body {
     background-color: lightblue;
 }
@@ -10,4 +12,203 @@ h1 {
 p {
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+}
+*/
+
+/* Main Content */
+
+body
+{
+    background-color: #49005F;
+}
+
+p
+{
+    font-size: 18px;
+    color: white;
+}
+
+/* DropDown Menu */
+
+.dropButton
+{
+    background-color: black;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 10px;
+    margin-top: -10px;
+    margin-bottom: -20px;
+    border: none;
+    cursor: pointer;
+}
+.dropButton:hover,
+.dropButton:focus
+{
+    background-color: #49005F;
+}
+.dropdownNav
+{
+    position: relative;
+    display: inline-block;
+}
+.content a
+{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.content
+{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdownNav a:hover
+{
+    background-color: #7BBBEA;
+}
+.show
+{
+    display: block;
+}
+header
+{
+    background-color: black;
+}
+
+@media only screen and (min-width: 481px)
+{
+
+    h1
+    {
+        font-size: 100px;
+    }
+
+    #music, #TVshows, #movies, #parents, #kids, hr
+    {
+        margin-bottom: 60px;
+        margin-top: 60px;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
+
+    p
+    {
+        font-size: 70px;
+    }
+
+    #categories
+    {
+        margin-top: 6%;
+        margin-bottom: 6%;
+    }
+
+    #kids
+    {
+        margin-left: 30%;
+        margin-bottom: 10%;
+    }
+
+
+
+    .dropdownNav
+    {
+        visibility: hidden;
+    }
+    a
+    {
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+    }
+
+    .backtoTop
+    {
+        margin-left: 38%;
+    }
+}
+@media only screen and (max-width: 480px)
+{
+    .desktopNav
+    {
+        visibility: hidden;
+        display: none;
+    }
+
+    .backtoTop
+    {
+        margin-left: 20%;
+    }
+
+}
+/* Desktop Menu */
+
+.Dlinks
+{
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+/* Home Page */
+
+
+#movies, #TVshows, #music
+{
+    background-color: #7BBBEA;
+    border-radius: 4%;
+    margin-bottom: 10px;
+}
+
+#usersInfo
+{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+h1
+{
+    color: white;
+}
+
+#quotes, #trivia, #clips, #interview
+{
+    margin-left: 40%;
+}
+
+
+/* footer */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .social
+  {
+      width: 50%;
+      margin-left: 20%;
+      margin-bottom: 30%;
+  }
+
+.backtoTop
+{
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
