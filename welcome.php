@@ -1,3 +1,15 @@
+<?php
+    session_start();
+ 
+// Checking if the user is logged in, if not, redirect him to login page
+    if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
+        header("location: login.php");
+        exit;
+    }
+
+?>
+
+
 <!DOCTYPE <!DOCTYPE html>
 <html>
 
@@ -21,13 +33,33 @@
 
             <a href="index.html"><img src="images/FlashBack_Logo.png" class="cell small-6 large-4"></a>
 
+            <div class="grid-x">
+                <h2> class="columns small-6 large-5" <?php 
+                date_default_timezone_set("America/Toronto");
+                $time = date("H");
+                $timezone = date("e");
+                if ($time < "12") {
+                    echo "Goooooooooood Morning FILADELPHIA!!!!! And Good Morning to you as well   ";
+                } else
+                    if ($time >= "12" && $time < "17") {
+                        echo "Good afternoon, my young man  ";
+                    } else
+                        if ($time >= "17" && $time < "20") {
+                            echo "Good evening Sir  ";
+                        } else
+                            if ($time >= "20") {
+                                echo "Good night YOU FILTHY ANIMAL!!  ";
+                            }
+                    ?><b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>Welcome User</h2>
+            </div>
+
             <div class="desktopNav">
                 <!-- Desktop Nav -->
                 
                 <nav class="cell small-0 large-offset-6 large-9">
                     <a class="Dlinks" href="parentpage.html">Parents</a>
                     <a class="Dlinks" href="kidspage.html">Kids</a>
-                    <a class="Dlinks" href="#"><img src="images/user_icon.svg" width="5%" height="5%"> Sign Out </a>
+                    <a class="Dlinks" href="admin/scripts/logout.php"><img src="images/user_icon.svg" width="5%" height="5%"> Sign Out </a>
                 </nav>
             </div>
             
@@ -40,6 +72,7 @@
                             <a href="parentpage.html">Parents</a>
                             <a href="kidspage.html">Kids</a>
                             <a href="#">Sign Out</a>
+                            
                         </div>
                 </div>
         
@@ -48,10 +81,6 @@
         </div>    
         
     </header>
-    
-    <div class="grid-x">
-        <h1 class="columns small-6 large-5">Welcome User</h1>
-    </div>
         
     <div id="categories" class="grid-x">
         <div id="movies">
