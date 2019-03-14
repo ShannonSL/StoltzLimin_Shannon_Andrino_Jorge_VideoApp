@@ -32,7 +32,7 @@
         // Validate info
         if(empty($username_err) && empty($password_err)){
             // Prepare a select statement
-            $sql = "SELECT user_id, user_name, user_pass FROM tbl_users WHERE user_name = :username";
+            $sql = "SELECT user_id, username, password FROM tbl_users WHERE username = :username";
         
             if($stmt = $pdo->prepare($sql)){
                 $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
@@ -44,15 +44,15 @@
                     if($stmt->rowCount() == 1){
                         if($row = $stmt->fetch()){
                             $id = $row["user_id"];
-                            $username = $row["user_name"];
-                            $hashed_password = $row["user_pass"];
+                            $username = $row["username"];
+                            $hashed_password = $row["password"];
                             if(password_verify($password, $hashed_password)){
                                 // If password is correct, start a new session
                                 session_start();
                             
                                 $_SESSION["loggedin"] = true;
                                 $_SESSION["user_id"] = $id;
-                                $_SESSION["user_name"] = $username;                            
+                                $_SESSION["username"] = $username;                            
                             
                                 // Redirect user to welcome page
                                 header("location: welcome.php");

@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter your username.";
     } else{
-        $sql = "SELECT users_id FROM tbl_users WHERE user_name = :username";
+        $sql = "SELECT users_id FROM tbl_users WHERE username = :username";
         
         if($stmt = $pdo->prepare($sql)){
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
@@ -50,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check errors before inserting into the database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
-        $sql = "INSERT INTO tbl_users (user_name, user_pass) VALUES (:username, :password)";
+        $sql = "INSERT INTO tbl_users (username, password) VALUES (:username, :password)";
          
         if($stmt = $pdo->prepare($sql)){
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
