@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 14, 2019 at 03:50 PM
--- Server version: 5.7.24
--- PHP Version: 7.2.14
+-- Servidor: 127.0.0.1:3306
+-- Tiempo de generación: 14-03-2019 a las 16:59:28
+-- Versión del servidor: 5.7.24
+-- Versión de PHP: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_roku`
+-- Base de datos: `db_roku`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_adult_genre`
+-- Estructura de tabla para la tabla `tbl_adult_genre`
 --
 
 DROP TABLE IF EXISTS `tbl_adult_genre`;
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `tbl_adult_genre` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_adult_tv`
+-- Estructura de tabla para la tabla `tbl_adult_tv`
 --
 
 DROP TABLE IF EXISTS `tbl_adult_tv`;
@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS `tbl_adult_tv` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_audio`
+-- Estructura de tabla para la tabla `tbl_audio`
 --
 
 DROP TABLE IF EXISTS `tbl_audio`;
@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS `tbl_audio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_audio`
+-- Volcado de datos para la tabla `tbl_audio`
 --
 
 INSERT INTO `tbl_audio` (`audio_id`, `audio_title`, `audio_year`, `audio_artist`, `audio_cover`, `audio_src`) VALUES
@@ -94,7 +94,7 @@ INSERT INTO `tbl_audio` (`audio_id`, `audio_title`, `audio_year`, `audio_artist`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_genres`
+-- Estructura de tabla para la tabla `tbl_genres`
 --
 
 DROP TABLE IF EXISTS `tbl_genres`;
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `tbl_genres` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_genre_kids`
+-- Estructura de tabla para la tabla `tbl_genre_kids`
 --
 
 DROP TABLE IF EXISTS `tbl_genre_kids`;
@@ -119,7 +119,7 @@ CREATE TABLE IF NOT EXISTS `tbl_genre_kids` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kids_genre_connect`
+-- Estructura de tabla para la tabla `tbl_kids_genre_connect`
 --
 
 DROP TABLE IF EXISTS `tbl_kids_genre_connect`;
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kids_genre_connect` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_kids_tv`
+-- Estructura de tabla para la tabla `tbl_kids_tv`
 --
 
 DROP TABLE IF EXISTS `tbl_kids_tv`;
@@ -148,7 +148,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kids_tv` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_kids_tv`
+-- Volcado de datos para la tabla `tbl_kids_tv`
 --
 
 INSERT INTO `tbl_kids_tv` (`kidstv_id`, `kids_title`, `kids_cover`, `kids_storyline`, `kids_genre`, `kids_trailer`) VALUES
@@ -171,7 +171,7 @@ INSERT INTO `tbl_kids_tv` (`kidstv_id`, `kids_title`, `kids_cover`, `kids_storyl
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_movies_kids`
+-- Estructura de tabla para la tabla `tbl_movies_kids`
 --
 
 DROP TABLE IF EXISTS `tbl_movies_kids`;
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `tbl_movies_kids` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_movie_adult`
+-- Estructura de tabla para la tabla `tbl_movie_adult`
 --
 
 DROP TABLE IF EXISTS `tbl_movie_adult`;
@@ -207,7 +207,7 @@ CREATE TABLE IF NOT EXISTS `tbl_movie_adult` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tbl_movie_adult`
+-- Volcado de datos para la tabla `tbl_movie_adult`
 --
 
 INSERT INTO `tbl_movie_adult` (`movies_id`, `movie_title`, `movie_year`, `movie_cover`, `movie_runtime`, `movie_storyline`, `movie_genre`, `movie_trailer`) VALUES
@@ -230,7 +230,7 @@ INSERT INTO `tbl_movie_adult` (`movies_id`, `movie_title`, `movie_year`, `movie_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_users`
+-- Estructura de tabla para la tabla `tbl_users`
 --
 
 DROP TABLE IF EXISTS `tbl_users`;
@@ -241,10 +241,18 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `email` varchar(75) NOT NULL,
   `age` varchar(3) NOT NULL,
   `password` varchar(30) NOT NULL,
-  `login_attempts` tinyint(4) NOT NULL,
   `last_login` date NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`user_id`, `name`, `username`, `email`, `age`, `password`, `last_login`) VALUES
+(1, 'Trevor', 'TheMightyT', 't@t.com', '', '123', '2019-03-14'),
+(2, 'George', 'user1', 't@t.com', '21', '123', '2019-03-14'),
+(3, 'Shannon', 'user2', 't@t.com', '', '123', '2019-03-14');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

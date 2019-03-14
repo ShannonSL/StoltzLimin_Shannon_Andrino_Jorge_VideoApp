@@ -1,7 +1,7 @@
 <?php 
     $db_dsn = array( 
         'host' => 'localhost',
-        'dbname' => 'db_movies',
+        'dbname' => 'db_roku',
         'charset' => 'utf8'
     );
 
