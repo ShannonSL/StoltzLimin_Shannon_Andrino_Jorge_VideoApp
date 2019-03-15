@@ -131,6 +131,13 @@ header
     {
         margin-left: 38%;
     }
+
+    .movieParents, .tvshowsparents, .musicVideos, .movieKids, .tvshowsKids
+    {
+        margin: 40px;
+        align-content: center;
+    }
+
 }
 @media only screen and (max-width: 480px)
 {
@@ -143,6 +150,12 @@ header
     .backtoTop
     {
         margin-left: 20%;
+    }
+
+    .movieParents, .tvshowsparents, .musicVideos, .movieKids, .tvshowsKids
+    {
+        margin: 10px;
+        align-content: center;
     }
 
 }
