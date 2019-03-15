@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 14-03-2019 a las 16:59:28
--- Versión del servidor: 5.7.24
--- Versión de PHP: 7.2.14
+-- Host: 127.0.0.1:3306
+-- Generation Time: Mar 15, 2019 at 04:12 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,26 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `db_roku`
+-- Database: `db_roku`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_adult_genre`
---
-
-DROP TABLE IF EXISTS `tbl_adult_genre`;
-CREATE TABLE IF NOT EXISTS `tbl_adult_genre` (
-  `id` int(11) NOT NULL,
-  `Genre` varchar(10) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_adult_tv`
+-- Table structure for table `tbl_adult_tv`
 --
 
 DROP TABLE IF EXISTS `tbl_adult_tv`;
@@ -53,10 +40,31 @@ CREATE TABLE IF NOT EXISTS `tbl_adult_tv` (
   PRIMARY KEY (`tv_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_adult_tv`
+--
+
+INSERT INTO `tbl_adult_tv` (`tv_id`, `tv_title`, `tv_year`, `tv_genre`, `tv_cover`, `tv_storyline`, `tv_trailer`) VALUES
+(1, 'Arrow', '2012', 'Action', 'Arrow.jpg', 'Young man presumed dead returns home a changed man', 'https://www.youtube.com/watch?v=XQS7JkQmlx8'),
+(2, 'The Big Bang Theory', '2007', 'Sitcom', 'BigBang.jpg', 'Mensa-fied best friends and roommates Leonard and Sheldon, physicists who work at the California Institute of Technology, may be able to tell everybody more than they want to know about quantum physics', 'https://www.youtube.com/watch?v=WBb3fojgW0Q'),
+(3, 'Black Mirror', '2011', 'Sci-Fi', 'BlackMirror.jpg', 'An anthology series exploring a twisted, high-tech world where humanity\'s greatest innovations and darkest instincts collide. ', 'https://www.youtube.com/watch?v=nSDviEdvw4U'),
+(4, 'Daredevil', '2015', 'Action', 'Daredevil.jpg', 'A blind lawyer by day, vigilante by night. Matt Murdock fights the crime of New York as Daredevil.', 'https://www.youtube.com/watch?v=jAy6NJ_D5vU'),
+(5, 'Doctor Who', '2005', 'Sci-Fi', 'DoctorWho.jpg', 'The further adventures in time and space of the alien adventurer known as the Doctor, a Time Lord or Lady who can change appearance and gender by regenerating when near death, and his or her human companion', 'https://www.youtube.com/watch?v=Gdi50ZJnE9Y'),
+(6, 'The Good Place', '2016', 'Sitcom', 'GoodPlace.jpg', 'When Eleanor Shellstrop finds herself in the afterlife, she\'s both relieved and surprised that she\'s made it into the Good Place. But it doesn\'t take long for Eleanor to realize she\'s there by mistake. ', 'https://www.youtube.com/watch?v=RfBgT5djaQw'),
+(7, 'Game Of Thrones', '2011', 'Fantasy', 'GOT.jpg', 'Family wars in a fantastical world, dragons, dire wolves, swords ', 'https://www.youtube.com/watch?v=BpJYNVhGf1s'),
+(8, 'NCIS', '2003', 'Action', 'NCIS.jpg', 'Naval Criminal Investigative Service Special Agent Leroy Jethro Gibbs leads a group of colorful personalities in investigating crimes -', 'https://www.youtube.com/watch?v=BhtDgn31XZo'),
+(9, 'Outlander', '2014', 'Historical', 'Outlander.jpg', 'Second World War-era nurse Claire Randall, who travels through time to 18th century Scotland and finds adventure and romance with the dashing Jamie ', 'https://www.youtube.com/watch?v=PFFKjptRr7Y'),
+(10, 'Riverdale', '2017', 'Mystery', 'Riverdale.jpg', ' He\'s decided he wants to pursue a future in the music business, but his recently ended clandestine relationship with the music teacher has left him without a mentor, and his friendship with Jughead Jones is in a bad place', 'https://www.youtube.com/watch?v=HxtLlByaYTc'),
+(11, 'Shameless', '2011', 'comedy', 'Shameless.jpg', 'Oscar-nominated actor William H. Macy stars as Frank Gallagher, a single father of six who spends much of his free time drinking at bars. ', 'https://www.youtube.com/watch?v=ex95FSZOT04'),
+(12, 'Stranger Things', '2016', 'Sci-Fi', 'Stranger.jpg', 'It\'s the fall of 1984, about a year after Will Byers was found, and he has been plagued by seeing visions of the Upside Down featuring a more dangerous monster.', 'https://www.youtube.com/watch?v=Bb4uR9gTVXI'),
+(13, 'Supernatural', '2005', 'Horror', 'Supernatural.jpg', 'Two brothers follow their father\'s footsteps as hunters, fighting evil supernatural beings of many kinds, including monsters, demons, and gods that roam the earth', 'https://www.youtube.com/watch?v=t-775JyzDTk'),
+(14, 'The Flash', '2014', 'Action', 'TheFlash.jpg', 'At 11, Barry Allen\'s life changed completely when his mother died in a freak accident and his innocent father was convicted of her murder. ', 'https://www.youtube.com/watch?v=Yj0l7iGKh8g'),
+(15, 'The Walking Dead', '2010', 'Horror', 'WalkingDead.jpg', 'The series focuses on Rick Grimes, a sheriff\'s deputy who slips into a coma after being shot. He awakens to find himself in a dangerous new world that has been overrun by \"walkers\".', 'https://www.youtube.com/watch?v=R1v0uFms68U');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_audio`
+-- Table structure for table `tbl_audio`
 --
 
 DROP TABLE IF EXISTS `tbl_audio`;
@@ -71,7 +79,7 @@ CREATE TABLE IF NOT EXISTS `tbl_audio` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tbl_audio`
+-- Dumping data for table `tbl_audio`
 --
 
 INSERT INTO `tbl_audio` (`audio_id`, `audio_title`, `audio_year`, `audio_artist`, `audio_cover`, `audio_src`) VALUES
@@ -94,46 +102,7 @@ INSERT INTO `tbl_audio` (`audio_id`, `audio_title`, `audio_year`, `audio_artist`
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_genres`
---
-
-DROP TABLE IF EXISTS `tbl_genres`;
-CREATE TABLE IF NOT EXISTS `tbl_genres` (
-  `genre_id` int(11) NOT NULL,
-  `genre_name` varchar(10) NOT NULL,
-  PRIMARY KEY (`genre_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_genre_kids`
---
-
-DROP TABLE IF EXISTS `tbl_genre_kids`;
-CREATE TABLE IF NOT EXISTS `tbl_genre_kids` (
-  `id` int(11) NOT NULL,
-  `genre` varchar(10) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_kids_genre_connect`
---
-
-DROP TABLE IF EXISTS `tbl_kids_genre_connect`;
-CREATE TABLE IF NOT EXISTS `tbl_kids_genre_connect` (
-  `id` int(11) NOT NULL,
-  `kids_genre` int(11) NOT NULL,
-  `genre_kids_id` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tbl_kids_tv`
+-- Table structure for table `tbl_kids_tv`
 --
 
 DROP TABLE IF EXISTS `tbl_kids_tv`;
@@ -148,7 +117,7 @@ CREATE TABLE IF NOT EXISTS `tbl_kids_tv` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tbl_kids_tv`
+-- Dumping data for table `tbl_kids_tv`
 --
 
 INSERT INTO `tbl_kids_tv` (`kidstv_id`, `kids_title`, `kids_cover`, `kids_storyline`, `kids_genre`, `kids_trailer`) VALUES
@@ -171,7 +140,7 @@ INSERT INTO `tbl_kids_tv` (`kidstv_id`, `kids_title`, `kids_cover`, `kids_storyl
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_movies_kids`
+-- Table structure for table `tbl_movies_kids`
 --
 
 DROP TABLE IF EXISTS `tbl_movies_kids`;
@@ -187,10 +156,31 @@ CREATE TABLE IF NOT EXISTS `tbl_movies_kids` (
   PRIMARY KEY (`novies_kids_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_movies_kids`
+--
+
+INSERT INTO `tbl_movies_kids` (`novies_kids_id`, `title`, `movie_year`, `movie_runtime`, `movie_storyline`, `movie_cover`, `movie_trailer`, `kids_genre`) VALUES
+(1, 'A Little Princess', '1995', '1hr 40min', 'A young girl is relegated to servitude at a boarding school when her father goes missing and is presumed dead.', 'Little.jpg', 'https://www.youtube.com/watch?v=Q3WJrWZ_npg', 'Family'),
+(2, 'ET The Extra Terrestrial ', '1982', '2hr 1min', 'A troubled child summons the courage to help a friendly alien escape Earth and return to his home-world. ', 'ET.jpg', 'https://www.youtube.com/watch?v=qYAETtIIClk', 'Family'),
+(3, 'The Princess Bride', '1987', '1hr 38min', 'Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness ', 'Bride.jpg', 'https://www.youtube.com/watch?v=O3CIXEAjcc8', 'family'),
+(4, 'The Sound of Music', '1965', '2hr 54min', 'a spirited young Austrian woman who leaves the convent to become a governess for Captain von Trapp’s (Christopher Plummer) seven unruly children', 'Music.jpg', 'https://www.youtube.com/watch?v=UY6uw3WpPzY', 'family'),
+(5, 'The Never Ending Story', '1984', '1hr 47min', 'A troubled boy dives into a wonderous fantasy world through the pages of a mysterious book.', 'NeverEnding.jpg', 'https://www.youtube.com/watch?v=UeFni9dOv7c', 'Family'),
+(6, 'The Witches', '1990', '1hr 32min', 'A young boy stumbles onto a witch convention and must stop them, even after he has been turned into a mouse.', 'TheWitches.jpg', 'https://www.youtube.com/watch?v=d_ZyqaN_XNM', 'Family'),
+(7, 'The Sandlot', '1993', '1hr 41min', 'When fifth-grader Scotty Smalls moves with his parents to a new town, he strikes out with the neighborhood kids, especially at baseball', 'TheSandlot.jpg', 'https://www.youtube.com/watch?v=_pz8mbHxBWE', 'Family'),
+(8, 'James and the Giant Peach', '1996', '1hr 24min', 'James finds a way out of his bleak existence when he discovers an enormous enchanted peach', 'Peach.jpg', 'https://www.youtube.com/watch?v=73ax6ZrcUx4', 'Family'),
+(9, 'Snow White and the Seven Dwarfs', '1937', '1hr 28min', 'Jealous of Snow White\'s beauty, the wicked queen orders the murder of her innocent stepdaughter, but later discovers that Snow White is still alive and hiding in a cottage with seven friendly little miners.', 'SnowWhite.jpg', 'https://www.youtube.com/watch?v=IfePzXxIuvc', 'Family'),
+(10, 'The Wizard of Oz', '1939', '1hr 52min', 'When a tornado rips through Kansas, Dorothy (Judy Garland) and her dog, Toto, are whisked away in their house to the magical land of Oz.', 'WizardOz.jpg', 'https://www.youtube.com/watch?v=njdreZRjvpc', 'Family'),
+(11, 'My Neighbour Totoro', '1988', '1hr 40min', 'Satsuke and her younger sister, Mei, as they settle into an old country house with their father and wait for their mother to recover from an illness in an area hospital', 'Totoro.jpg', 'https://www.youtube.com/watch?v=TuLX50_5UAI', 'Family'),
+(12, 'The Muppet Movie', '1979', '1hr 37min', 'After Kermit the Frog decides to pursue a movie career, he starts his cross-country trip from Florida to California', 'Muppet.jpg', 'https://www.youtube.com/watch?v=EXicfn0cMIY', 'Family'),
+(13, 'Mary Poppins', '1964', '2hr 19min', 'When the children of the wealthy and uptight Banks family, are faced with the prospect of a new nanny, they are pleasantly surprised by the arrival of the magical Mary Poppins', 'MaryPoppins.jpg', 'https://www.youtube.com/watch?v=nOfH7uEojKk', 'Family'),
+(14, 'Jumanji', '1995', '1hr 44min', 'A magical board game unleashes a world of adventure on siblings Peter (Bradley Pierce) and Judy Shepherd (Kirsten Dunst). ', 'Jumanji.jpg', 'https://www.youtube.com/watch?v=DvQ-PGUr6SM', 'Family'),
+(15, 'The Goonies', '1985', '1hr 54min', 'Old-fashioned yarn about a band of adventurous kids who take on the might of a property developing company which plans to destroy their home to build a country clu', 'Goonies.jpg', 'https://www.youtube.com/watch?v=hJ2j4oWdQtU', 'Family');
+
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_movie_adult`
+-- Table structure for table `tbl_movie_adult`
 --
 
 DROP TABLE IF EXISTS `tbl_movie_adult`;
@@ -207,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `tbl_movie_adult` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Volcado de datos para la tabla `tbl_movie_adult`
+-- Dumping data for table `tbl_movie_adult`
 --
 
 INSERT INTO `tbl_movie_adult` (`movies_id`, `movie_title`, `movie_year`, `movie_cover`, `movie_runtime`, `movie_storyline`, `movie_genre`, `movie_trailer`) VALUES
@@ -230,7 +220,7 @@ INSERT INTO `tbl_movie_adult` (`movies_id`, `movie_title`, `movie_year`, `movie_
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `tbl_users`
+-- Table structure for table `tbl_users`
 --
 
 DROP TABLE IF EXISTS `tbl_users`;
@@ -241,18 +231,10 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
   `email` varchar(75) NOT NULL,
   `age` varchar(3) NOT NULL,
   `password` varchar(30) NOT NULL,
+  `login_attempts` tinyint(4) NOT NULL,
   `last_login` date NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `tbl_users`
---
-
-INSERT INTO `tbl_users` (`user_id`, `name`, `username`, `email`, `age`, `password`, `last_login`) VALUES
-(1, 'Trevor', 'TheMightyT', 't@t.com', '', '123', '2019-03-14'),
-(2, 'George', 'user1', 't@t.com', '21', '123', '2019-03-14'),
-(3, 'Shannon', 'user2', 't@t.com', '', '123', '2019-03-14');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
