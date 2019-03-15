@@ -2,7 +2,7 @@
     
     //Checking if the user is properly logged in and if he is, send him to the welcome page
     if(isset($_SESSION["loggedin"]) &&
-    $_SESSION["loggenin"] === true){
+    $_SESSION["login"] === true){
         header("location: welcome.php");
         exit;
     }
