@@ -1,5 +1,5 @@
 <?php
-    require_once "config.php";
+    require_once "connect.php";
 
 $username = $password = $confirm_password = "";
 $username_error = $password_error = $confirm_password_error = "";
@@ -10,7 +10,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty(trim($_POST["username"]))){
         $username_err = "Please enter your username.";
     } else{
-        $sql = "SELECT id FROM users WHERE username = :username";
+        $sql = "SELECT users_id FROM tbl_users WHERE username = :username";
         
         if($stmt = $pdo->prepare($sql)){
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
@@ -33,8 +33,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Validating the password
     if(empty(trim($_POST["password"]))){
         $password_err = "Please enter your password.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have more than 6 characters.";
     } else{
         $password = trim($_POST["password"]);
     }
@@ -52,7 +50,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     // Check errors before inserting into the database
     if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
         
-        $sql = "INSERT INTO users (username, password) VALUES (:username, :password)";
+        $sql = "INSERT INTO tbl_users (username, password) VALUES (:username, :password)";
          
         if($stmt = $pdo->prepare($sql)){
             $stmt->bindParam(":username", $param_username, PDO::PARAM_STR);
@@ -62,7 +60,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
             
             if($stmt->execute()){
-                header("location: login.php");
+                header("location: user_login.php");
             } else{
                 echo "Something went wrong. Please try again later.";
             }
@@ -92,23 +90,22 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="formInfo <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>">
                 <label>Username</label>
                 <input type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                <span class="help-block"><?php echo $username_err; ?></span>
+                <span class="help-block"></span>
             </div>    
             <div class="formInfo <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>">
                 <label>Password</label>
                 <input type="password" name="password" class="form-control" value="<?php echo $password; ?>">
-                <span class="help-block"><?php echo $password_err; ?></span>
+                <span class="help-block"></span>
             </div>
             <div class="formInfo <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>">
                 <label>Confirm Password</label>
                 <input type="password" name="confirm_password" class="form-control" value="<?php echo $confirm_password; ?>">
-                <span class="help-block"><?php echo $confirm_password_err; ?></span>
+                <span class="help-block"></span>
             </div>
             <div class="formInfo">
                 <input type="submit" class="btn btn-primary" value="Submit">
-                <input type="reset" class="btn btn-default" value="Reset">
             </div>
-            <p>Already have an account with Us? <a href="login.php">Login here then!!</a>.</p>
+            <p>Already have an account with Us? <a href="user_login.php">Login here then!!</a>.</p>
         </form>
 
 
